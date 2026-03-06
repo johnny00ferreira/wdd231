@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+header img {
+    width: 65px;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+}
+
+nav.open {
+    display: flex;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.student-photo img {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+.navigation {
+    background: #444;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.navigation a:hover {
+    background: #666;
+}
+.completed {
+    background: #4CAF50;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 2px 0;
+}

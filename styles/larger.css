@@ -1,0 +1,22 @@
+@media (min-width: 640px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+
+}
+.navigation {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navigation a {
+    border: none;
+    font-weight: bold;
+}
