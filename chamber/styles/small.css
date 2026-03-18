@@ -39,6 +39,7 @@ header span {
 
 .navigation {
     background: #444;
+    color: white;
     padding: 10px 20px;
     display: none;
     flex-direction: column;
@@ -58,9 +59,11 @@ header span {
 .navigation a:hover {
     background: #222;
 }
+
 .navigation a:focus {
     outline: 2px solid #fff;
 }
+
 .navigation a.active {
     font-weight: bold;
     border-bottom: 2px solid white;
