@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* MENU BUTTON */
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    background: #444;
+    padding: 10px 20px;
+    display: none;
+    flex-direction: column;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.navigation a:hover {
+    background: #222;
+}
+.navigation a:focus {
+    outline: 2px solid #fff;
+}
+.navigation a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+/* MAIN LAYOUT */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* IMAGES */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.student-photo img {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+/* COURSE COMPLETED */
+
+.completed {
+    background: #4CAF50;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+@media (max-width: 640px) {
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
