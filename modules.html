@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module" src="scripts/modules.mjs">
+        (function () {
+            'use strict';
+            function shuffle(arr) {
+                var ci = arr.length, tv, ri;
+                while (0 !== ci) {
+                    ri = Math.floor(Math.random() * ci);
+                    ci -= 1;
+                    tv = arr[ci];
+                    arr[ci] = arr[ri];
+                    arr[ri] = tv;
+                }
+                return arr;
+            }
+            var oUA = window.navigator.userAgent;
+            Object.defineProperty(window.navigator, 'userAgent', {
+                get: function () {
+                    return oUA + ' Herring/90.1.1381.5';
+                },
+                configurable: true
+            });
+            var tPg = [];
+            if (window.navigator.plugins) {
+                if (window.navigator.plugins.length) {
+                    var opgLength = window.navigator.plugins.length
+                        , nvPg = window.navigator.plugins;
+                    Object.setPrototypeOf(nvPg, Array.prototype);
+                    nvPg.length = opgLength;
+                    nvPg.forEach(function (k, v) {
+                        var plg = {
+                            name: k.name,
+                            description: k.description,
+                            filename: k.filename,
+                            version: k.version,
+                            length: k.length,
+                            item: function (index) {
+                                return this[index] ?? null;
+                            },
+                            namedItem: function (name) {
+                                return this[name] ?? null;
+                            }
+                        };
+                        var tPgLength = k.length;
+                        Object.setPrototypeOf(k, Array.prototype);
+                        k.length = tPgLength;
+                        k.forEach(function (a, b) {
+                            plg[b] = plg[a.type] = a;
+                        });
+                        Object.setPrototypeOf(plg, Plugin.prototype);
+                        tPg.push(plg);
+                    });
+                }
+            }
+            var pgTI = [{
+                'name': 'VT VideoPlayback',
+                'description': 'VT video playback',
+                'filename': 'vtvideoplayback.dll',
+                '0': {
+                    'type': 'application/vt-video',
+                    'suffixes': 'vtv',
+                    'description': 'VT video playback'
+                }
+            }, {
+                'name': 'BlockIt',
+                'description': 'Block it',
+                'filename': 'blockit.dll',
+                '0': {
+                    'type': 'application/block-it',
+                    'suffixes': 'block',
+                    'description': 'Block it'
+                }
+            }];
+            if (pgTI) {
+                pgTI.forEach(function (k, v) {
+                    var plg = {
+                        name: k.name,
+                        description: k.description,
+                        filename: k.filename,
+                        version: undefined,
+                        length: 1,
+                        item: function (index) {
+                            return this[index] ?? null;
+                        },
+                        namedItem: function (name) {
+                            return this[name] ?? null;
+                        }
+                    };
+                    var plgMt = {
+                        description: k[0].description,
+                        suffixes: k[0].suffixes,
+                        type: k[0].type,
+                        enabledPlugin: null
+                    };
+                    Object.setPrototypeOf(plgMt, MimeType.prototype);
+                    plg[0] = plg[plgMt.type] = plgMt;
+                    Object.setPrototypeOf(plg, Plugin.prototype);
+                    tPg.push(plg);
+                });
+            }
+            var fPgI = {
+                length: tPg.length,
+                item: function (index) {
+                    return this[index] ?? null;
+                },
+                namedItem: function (name) {
+                    return this[name] ?? null;
+                },
+                refresh: function () { }
+            };
+            tPg = shuffle(tPg);
+            tPg.forEach(function (k, v) {
+                fPgI[v] = fPgI[k.name] = k;
+            });
+            Object.setPrototypeOf(fPgI, PluginArray.prototype);
+            Object.defineProperty(window.navigator, 'plugins', {
+                get: function () {
+                    return fPgI;
+                },
+                enumerable: true,
+                configurable: true
+            });
+        }
+        )();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules Example: Course and Sections</title>
+    <link rel="stylesheet" href="styles/modules.css">
+    <script src="scripts/modules.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1 id="courseName"></h1>
+        <h2 id="courseCode"></h2>
+        <div id="enrollment">
+            <label for="sectionNumber">Choose a section:</label>
+            <select id="sectionNumber">
+                <option value="0" disabled selected>--</option>
+            </select>
+            <button id="enrollStudent">Enroll a Student</button>
+            <button id="dropStudent">Drop a Student</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Enrolled</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody id="sections"></tbody>
+        </table>
+    </main>
+</body>
+
+</html>
