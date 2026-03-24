@@ -6,15 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Chamber of Commerce</title>
+
     <meta name="description" content="Welcome to the Chamber of Commerce. Discover local businesses, events, and opportunities to connect and grow.">
     <meta name="author" content="Johnny Ferreira">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta property="og:title" content="Chamber of Commerce Business Directory WDD231 Project">
-    <meta property="og:description"
-        content="Explore the Chamber of Commerce business directory featuring local companies, contact information, and membership levels supporting community growth.">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Chamber of Commerce Home">
+    <meta property="og:description" content="Discover local businesses, events, and opportunities through the Chamber of Commerce.">
     <meta property="og:image" content="https://johnny00ferreira.github.io/wdd231/images/chamber-og-image.webp">
     <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +30,7 @@
 
     <header>
         <h1>Chamber of Commerce</h1>
-        <button id="menu">☰</button>
+        <button id="menu" aria-label="Open navigation menu">☰</button>
     </header>
 
     <nav class="navigation">
@@ -39,22 +42,26 @@
 
     <main>
 
-        
+      
         <section class="cta">
             <h2 class="visually-hidden">Join the Chamber</h2>
             <a href="#" class="btn">Join the Chamber</a>
         </section>
+
         
         <section class="hero">
             <h2 class="visually-hidden">Welcome to the Chamber</h2>
-            <img src="images/hero.webp" alt="City business area" loading="lazy">
+            <img src="images/hero.webp" alt="City skyline representing local businesses" loading="lazy">
         </section>
-        
+
+       
         <section class="events">
             <h2>Current Events</h2>
             <p>Business Networking - March 30</p>
             <p>Local Market Fair - April 5</p>
+            <p>Entrepreneur Workshop - April 10</p>
         </section>
+
         
         <section class="weather">
             <h2>Weather</h2>
@@ -62,6 +69,7 @@
             <p id="desc"></p>
             <div id="forecast"></div>
         </section>
+
         
         <section class="spotlights">
             <h2>Featured Businesses</h2>
@@ -71,12 +79,11 @@
     </main>
 
     <footer>
-
-        <p>WDD231 Chamber Directory Page Project</p>
+        <p>WDD231 Chamber Project</p>
         <p>Johnny Ferreira</p>
         <p>© <span id="year"></span> Chamber of Commerce</p>
-
     </footer>
+
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/index.js" defer></script>
