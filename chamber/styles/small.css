@@ -157,14 +157,6 @@ footer a:hover {
     margin: 10px;
 }
 
-.navigation {
-    display: none;
-}
-
-.navigation.open {
-    display: flex;
-    flex-direction: column;
-}
 
 @media (min-width: 768px) {
     .navigation {
