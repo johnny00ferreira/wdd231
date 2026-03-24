@@ -59,8 +59,8 @@ getMembers();
 
 
 const menuBtn = document.getElementById("menu");
-const nav = document.querySelector(".navigation");
+const navMenu = document.querySelector(".navigation");
 
 menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("open");
+    navMenu.classList.toggle("open");
 });
