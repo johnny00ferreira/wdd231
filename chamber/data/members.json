@@ -1,58 +1,60 @@
-[
-    {
-        "name": "Tech Solutions",
-        "address": "123 Business St",
-        "phone": "(83) 555-1111",
-        "website": "https://techsolutions.com",
-        "image": "business1.webp",
-        "membership": "Gold"
-    },
-    {
-        "name": "Ocean Café",
-        "address": "45 Beach Ave",
-        "phone": "(83) 555-2222",
-        "website": "https://oceancafe.com",
-        "image": "business2.webp",
-        "membership": "Silver"
-    },
-    {
-        "name": "Green Market",
-        "address": "78 Central Rd",
-        "phone": "(83) 555-3333",
-        "website": "https://greenmarket.com",
-        "image": "business3.webp",
-        "membership": "Bronze"
-    },
-    {
-        "name": "Sun Hotel",
-        "address": "22 Paradise St",
-        "phone": "(83) 555-4444",
-        "website": "https://sunhotel.com",
-        "image": "business4.webp",
-        "membership": "Gold"
-    },
-    {
-        "name": "JP Fitness",
-        "address": "90 Active Blvd",
-        "phone": "(83) 555-5555",
-        "website": "https://jpfitness.com",
-        "image": "business5.webp",
-        "membership": "Silver"
-    },
-    {
-        "name": "City Bookstore",
-        "address": "12 Knowledge Ave",
-        "phone": "(83) 555-6666",
-        "website": "https://citybooks.com",
-        "image": "business6.webp",
-        "membership": "Bronze"
-    },
-    {
-        "name": "Beach Travel",
-        "address": "60 Ocean Dr",
-        "phone": "(83) 555-7777",
-        "website": "https://beachtravel.com",
-        "image": "business7.webp",
-        "membership": "Gold"
-    }
-]
+{
+    "members": [
+        {
+            "name": "Tech Solutions",
+            "address": "123 Business St",
+            "phone": "(83) 555-1111",
+            "website": "https://techsolutions.com",
+            "image": "images/business1.webp",
+            "level": "Gold"
+        },
+        {
+            "name": "Ocean Café",
+            "address": "45 Beach Ave",
+            "phone": "(83) 555-2222",
+            "website": "https://oceancafe.com",
+            "image": "images/business2.webp",
+            "level": "Silver"
+        },
+        {
+            "name": "Green Market",
+            "address": "78 Central Rd",
+            "phone": "(83) 555-3333",
+            "website": "https://greenmarket.com",
+            "image": "images/business3.webp",
+            "level": "Bronze"
+        },
+        {
+            "name": "Sun Hotel",
+            "address": "22 Paradise St",
+            "phone": "(83) 555-4444",
+            "website": "https://sunhotel.com",
+            "image": "images/business4.webp",
+            "level": "Gold"
+        },
+        {
+            "name": "JP Fitness",
+            "address": "90 Active Blvd",
+            "phone": "(83) 555-5555",
+            "website": "https://jpfitness.com",
+            "image": "images/business5.webp",
+            "level": "Silver"
+        },
+        {
+            "name": "City Bookstore",
+            "address": "12 Knowledge Ave",
+            "phone": "(83) 555-6666",
+            "website": "https://citybooks.com",
+            "image": "images/business6.webp",
+            "level": "Bronze"
+        },
+        {
+            "name": "Beach Travel",
+            "address": "60 Ocean Dr",
+            "phone": "(83) 555-7777",
+            "website": "https://beachtravel.com",
+            "image": "images/business7.webp",
+            "level": "Gold"
+        }
+    ]
+}
