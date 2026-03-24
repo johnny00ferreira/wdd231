@@ -18,3 +18,16 @@
     }
 
 }
+
+@media (min-width: 768px) {
+   
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .hero {
+        grid-column: span 2;
+    }
+}

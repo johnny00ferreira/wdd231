@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | WDD231</title>
+    <meta name="description"
+        content="Personal homepage of Johnny Ferreira, a BYU-Idaho student and Gol Airlines professional in João Pessoa, Brazil, sharing projects and academic progress.">
+    <meta name="author" content="Johnny Ferreira">
+    <meta property="og:title" content="Johnny Ferreira | WDD231">
+    <meta property="og:description" content="Personal homepage and course work for WDD231.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/index.html">    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Site logo">
+        <span>Johnny Ferreira</span>
+        <button id="menu">☰</button>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="chamber/index.html">Chamber</a>
+        <a href="final/index.html">Final</a>
+    </nav>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am married and currently work at Gol Airlines, where I have the opportunity
+                to grow professionally and develop valuable skills in the aviation industry.
+                I live in João Pessoa, Brazil, a beautiful coastal city where I enjoy spending
+                time at the beach and appreciating the outdoors. In my free time, I like to
+                stay active by practicing physical exercises and maintaining a healthy
+                lifestyle.
+
+                I am currently pursuing a degree at BYU-Idaho because I believe education is
+                a powerful tool for personal and professional growth. Through this program,
+                I am developing my skills in technology and web development, which I hope
+                will open new opportunities for my career. My goal is to continue learning,
+                improving my abilities, and contributing more effectively to the company
+                where I work while building a strong future for my family.
+            </p>
+        </section>
+
+        <section class="student-photo">
+            <h2>Student Photo</h2>
+            <img src="images/profile.jpg" alt="Student photo">
+        </section>
+
+        <section>
+            <h2>Web Certificate Courses</h2>
+
+            <div>
+                <button id="all">All</button>
+                <button id="wdd">WDD</button>
+                <button id="cse">CSE</button>
+            </div>
+
+            <div id="courses"></div>
+
+            <p>Total Credits: <span id="credits"></span></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="social-icons">
+
+            <a href="https://github.com/johnny00ferreira/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub" width="30">
+            </a>
+
+            <a href="https://linkedin.com/in/SEULINKEDIN" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="30">
+            </a>
+
+        </div>
+
+        <p>
+            © <span id="currentyear"></span> Johnny Ferreira – Brazil
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+</body>
+
+</html>

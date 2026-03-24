@@ -132,3 +132,52 @@ footer a:hover {
 .social-icons {
     margin-bottom: 10px;
 }
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.cta {
+    text-align: center;
+    margin: 1rem;
+}
+
+.btn {
+    background: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.spotlights div {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 10px;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        display: flex;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .hero {
+        grid-column: span 2;
+    }
+}
