@@ -18,7 +18,8 @@ async function getWeather() {
     for (let i = 8; i <= 24; i += 8) {
         const item = data.list[i];
         const p = document.createElement("p");
-        p.textContent = `Day ${i / 8}: ${item.main.temp}°C`;
+        const days = ["Tomorrow", "Day 2", "Day 3"];
+        p.textContent = `${days[(i / 8) - 1]}: ${item.main.temp}°C`;
         forecast.appendChild(p);
     }
 }
@@ -44,13 +45,13 @@ async function getMembers() {
 
         div.innerHTML = `
             <h3>${member.name}</h3>
-            <img src="${member.image}" alt="${member.name}" loading="lazy">
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit</a>
-            <p>${member.level}</p>
+            <img src="${member.image}" alt="${member.name}">
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <a href="${member.website}" target="_blank">Website</a>
+            <p><strong>Level:</strong> ${member.level}</p>
         `;
-
+ 
         cards.appendChild(div);
     });
 }
