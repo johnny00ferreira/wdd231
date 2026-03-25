@@ -38,10 +38,10 @@ header span {
 /* NAVIGATION */
 
 .navigation {
+    display: none;
     background: #444;
     color: white;
     padding: 10px 20px;
-    display: none;
     flex-direction: column;
 }
 
