@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Join the Chamber of Commerce to grow your business. Choose from NP, Bronze, Silver, or Gold membership levels and apply online.">
+    <meta name="author" content="Johnny Ferreira da Silva">
+    
     <title>Join Chamber</title>
 
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script defer src="scripts/navigation-index.js"></script>
+    <script defer src="scripts/navigation.js"></script>
 </head>
 
 <body>
@@ -34,55 +38,41 @@
 
             <form method="get" action="thankyou.html" class="join-form">
 
-                <label>
-                    First Name
-                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name"
-                        required>
-                </label>
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" name="firstName" title="Enter your first name"
+                    autocomplete="given-name" required>
 
-                <label>
-                    Last Name
-                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
-                </label>
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" name="lastName" title="Enter your last name" autocomplete="family-name"
+                    required>
 
-                <label>
-                    Organization Title
-                    <input type="text" name="orgTitle" title="At least 7 characters, letters, hyphens, spaces"
-                        pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
-                </label>
+                <label for="orgTitle">Organization Title</label>
+                <input id="orgTitle" type="text" name="orgTitle"
+                    title="Minimum 7 characters, letters, hyphens and spaces" pattern="[A-Za-z\s-]{7,}"
+                    autocomplete="organization-title">
 
-                <label>
-                    Email
-                    <input type="email" name="email" title="Enter your email" placeholder="example@email.com"
-                        autocomplete="email" required>
-                </label>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" title="Enter your email" placeholder="example@email.com"
+                    autocomplete="email" required>
 
-                <label>
-                    Mobile Phone
-                    <input type="tel" name="phone" title="Enter your phone" autocomplete="tel" required>
-                </label>
+                <label for="phone">Mobile Phone</label>
+                <input id="phone" type="tel" name="phone" title="Enter your phone" autocomplete="tel" required>
 
-                <label>
-                    Organization Name
-                    <input type="text" name="organization" title="Enter organization name" autocomplete="organization"
-                        required>
-                </label>
+                <label for="organization">Organization Name</label>
+                <input id="organization" type="text" name="organization" title="Enter organization name"
+                    autocomplete="organization" required>
 
-                <label>
-                    Membership Level
-                    <select name="membership" required>
-                        <option value="">Select</option>
-                        <option value="np">NP Membership</option>
-                        <option value="bronze">Bronze</option>
-                        <option value="silver">Silver</option>
-                        <option value="gold">Gold</option>
-                    </select>
-                </label>
+                <label for="membership">Membership Level</label>
+                <select id="membership" name="membership" required>
+                    <option value="">Select</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
 
-                <label>
-                    Business Description
-                    <textarea name="description" title="Describe your business"></textarea>
-                </label>
+                <label for="description">Business Description</label>
+                <textarea id="description" name="description" title="Describe your business"></textarea>
 
                 <input type="hidden" id="timestamp" name="timestamp">
 
@@ -96,22 +86,30 @@
 
             <div class="join-card">
                 <h3>NP Membership</h3>
-                <button onclick="openModal('npModal')">View Benefits</button>
+                <button onclick="openModal('npModal')" aria-label="View NP membership benefits">
+                    View Benefits
+                </button>
             </div>
 
             <div class="join-card">
-                <h3>Bronze</h3>
-                <button onclick="openModal('bronzeModal')">View Benefits</button>
+                <h3>Bronze Membership</h3>
+                <button onclick="openModal('bronzeModal')" aria-label="View Bronze membership benefits">
+                    View Benefits
+                </button>
             </div>
 
             <div class="join-card">
-                <h3>Silver</h3>
-                <button onclick="openModal('silverModal')">View Benefits</button>
+                <h3>Silver Membership</h3>
+                <button onclick="openModal('silverModal')" aria-label="View Silver membership benefits">
+                    View Benefits
+                </button>
             </div>
 
             <div class="join-card">
-                <h3>Gold</h3>
-                <button onclick="openModal('goldModal')">View Benefits</button>
+                <h3>Gold Membership</h3>
+                <button onclick="openModal('goldModal')" aria-label="View Gold membership benefits">
+                    View Benefits
+                </button>
             </div>
 
         </section>
@@ -120,34 +118,35 @@
 
     <!-- MODALS -->
     <dialog id="npModal">
-        <p>Free membership for non-profits.</p>
+        <p>Free membership for non-profit organizations.</p>
         <button onclick="closeModal('npModal')">Close</button>
     </dialog>
 
     <dialog id="bronzeModal">
-        <p>Basic advertising benefits.</p>
+        <p>Basic advertising and networking opportunities.</p>
         <button onclick="closeModal('bronzeModal')">Close</button>
     </dialog>
 
     <dialog id="silverModal">
-        <p>Events and discounts included.</p>
+        <p>Event discounts and increased visibility.</p>
         <button onclick="closeModal('silverModal')">Close</button>
     </dialog>
 
     <dialog id="goldModal">
-        <p>Premium exposure and training.</p>
+        <p>Premium exposure, training, and featured promotions.</p>
         <button onclick="closeModal('goldModal')">Close</button>
     </dialog>
 
     <footer>
-        <p>&copy; Chamber of Commerce</p>
+        <p>WDD231 Chamber Project</p>
+        <p>Johnny Ferreira</p>
+        <p>© <span id="year"></span> Chamber of Commerce</p>
     </footer>
 
     <script>
-        // timestamp
+       
         document.getElementById("timestamp").value = new Date().toISOString();
 
-        // modals
         function openModal(id) {
             document.getElementById(id).showModal();
         }
