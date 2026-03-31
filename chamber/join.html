@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join the Chamber of Commerce to grow your business. Choose from NP, Bronze, Silver, or Gold membership levels and apply online.">
     <meta name="author" content="Johnny Ferreira da Silva">
-    <title>Join Chamber</title>
+    <title>Join Chamber of Commerce</title>
+    <meta property="og:title" content="Join Chamber of Commerce">
+    <meta property="og:description" content="Join the Chamber of Commerce to grow your business. Choose from NP, Bronze, Silver, or Gold membership levels.">
+    <meta property="og:image" content="https://johnny00ferreira.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/join.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-
 </head>
 
 <body>
@@ -28,7 +35,6 @@
 
     <main class="join-container">
 
-        <!-- FORM -->
         <section>
             <h1>Membership Application</h1>
 
@@ -48,7 +54,7 @@
                     autocomplete="organization-title">
 
                 <label for="email">Email</label>
-                <input id="email" type="email" name="email" title="Enter your email" placeholder="example@email.com"
+                <input id="email" type="email" name="email" placeholder="example@email.com" title="Enter your email"
                     autocomplete="email" required>
 
                 <label for="phone">Mobile Phone</label>
@@ -77,35 +83,26 @@
             </form>
         </section>
 
-        <!-- CARDS -->
         <section class="join-cards">
 
             <div class="join-card">
-                <h3>NP Membership</h3>
-                <button onclick="openModal('npModal')" aria-label="View NP membership benefits">
-                    View Benefits
-                </button>
+                <h2>NP Membership</h2>
+                <button data-modal="npModal" aria-label="View NP membership benefits">View Benefits</button>
             </div>
 
             <div class="join-card">
-                <h3>Bronze Membership</h3>
-                <button onclick="openModal('bronzeModal')" aria-label="View Bronze membership benefits">
-                    View Benefits
-                </button>
+                <h2>Bronze Membership</h2>
+                <button data-modal="bronzeModal" aria-label="View Bronze membership benefits">View Benefits</button>
             </div>
 
             <div class="join-card">
-                <h3>Silver Membership</h3>
-                <button onclick="openModal('silverModal')" aria-label="View Silver membership benefits">
-                    View Benefits
-                </button>
+                <h2>Silver Membership</h2>
+                <button data-modal="silverModal" aria-label="View Silver membership benefits">View Benefits</button>
             </div>
 
             <div class="join-card">
-                <h3>Gold Membership</h3>
-                <button onclick="openModal('goldModal')" aria-label="View Gold membership benefits">
-                    View Benefits
-                </button>
+                <h2>Gold Membership</h2>
+                <button data-modal="goldModal" aria-label="View Gold membership benefits">View Benefits</button>
             </div>
 
         </section>
@@ -115,22 +112,22 @@
     <!-- MODALS -->
     <dialog id="npModal">
         <p>Free membership for non-profit organizations.</p>
-        <button onclick="closeModal('npModal')">Close</button>
+        <button data-close>Close</button>
     </dialog>
 
     <dialog id="bronzeModal">
         <p>Basic advertising and networking opportunities.</p>
-        <button onclick="closeModal('bronzeModal')">Close</button>
+        <button data-close>Close</button>
     </dialog>
 
     <dialog id="silverModal">
         <p>Event discounts and increased visibility.</p>
-        <button onclick="closeModal('silverModal')">Close</button>
+        <button data-close>Close</button>
     </dialog>
 
     <dialog id="goldModal">
         <p>Premium exposure, training, and featured promotions.</p>
-        <button onclick="closeModal('goldModal')">Close</button>
+        <button data-close>Close</button>
     </dialog>
 
     <footer>
@@ -139,8 +136,8 @@
         <p>© <span id="year"></span> Chamber of Commerce</p>
     </footer>
 
-<script defer src="scripts/navigation.js"></script>
-<script defer src="scripts/join.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/join.js"></script>
 
 </body>
 
