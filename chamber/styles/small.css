@@ -167,3 +167,61 @@ footer a:hover {
     left: -9999px;
 }
 
+.join-container {
+    display: grid;
+    gap: 20px;
+}
+
+.join-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.join-cards {
+    display: grid;
+    gap: 15px;
+}
+
+.join-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+.join-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.join-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.join-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MODAL */
+dialog {
+    border-radius: 10px;
+    padding: 20px;
+}
