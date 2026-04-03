@@ -1,11 +1,9 @@
-/* GRID CONTAINER */
 .cards-container {
     display: grid;
     gap: 1rem;
     padding: 1rem;
 }
 
-/* SMALL */
 .cards-container {
     grid-template-areas:
         "card1"
@@ -18,7 +16,6 @@
         "card8";
 }
 
-/* APPLY AREAS */
 .card:nth-child(1) {
     grid-area: card1;
 }
@@ -51,7 +48,6 @@
     grid-area: card8;
 }
 
-/* MEDIUM */
 @media (min-width: 641px) {
     .cards-container {
         grid-template-areas:
@@ -62,7 +58,6 @@
     }
 }
 
-/* LARGE */
 @media (min-width: 1025px) {
     .cards-container {
         grid-template-areas:
@@ -71,7 +66,6 @@
     }
 }
 
-/* CARD STYLE */
 .card {
     border: 1px solid #ccc;
     padding: 1rem;
@@ -86,7 +80,6 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* IMAGE FIX */
 .card img {
     width: 100%;
     max-width: 300px;
@@ -95,11 +88,10 @@
     border-radius: 8px;
 }
 
-/* VISITOR MESSAGE */
-#visitor-message {
+.visitor-message {
+    grid-column: 1 / -1;
     background: #eee;
     padding: 1rem;
-    margin: 1rem;
     text-align: center;
     font-weight: bold;
     border-radius: 8px;
