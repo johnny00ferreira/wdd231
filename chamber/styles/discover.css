@@ -1,0 +1,63 @@
+.cards-container {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* SMALL (320px–640px) */
+.cards-container {
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* MEDIUM (641px–1024px) */
+@media (min-width: 641px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* LARGE (1025px+) */
+@media (min-width: 1025px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT (desktop only) */
+@media (min-width: 641px) {
+    .card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+}
+
+#visitor-message {
+    background: #eee;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
