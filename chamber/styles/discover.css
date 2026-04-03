@@ -1,9 +1,11 @@
+/* GRID CONTAINER */
 .cards-container {
     display: grid;
     gap: 1rem;
     padding: 1rem;
 }
 
+/* SMALL */
 .cards-container {
     grid-template-areas:
         "card1"
@@ -16,6 +18,7 @@
         "card8";
 }
 
+/* APPLY AREAS */
 .card:nth-child(1) {
     grid-area: card1;
 }
@@ -48,6 +51,7 @@
     grid-area: card8;
 }
 
+/* MEDIUM */
 @media (min-width: 641px) {
     .cards-container {
         grid-template-areas:
@@ -58,6 +62,7 @@
     }
 }
 
+/* LARGE */
 @media (min-width: 1025px) {
     .cards-container {
         grid-template-areas:
@@ -66,32 +71,36 @@
     }
 }
 
+/* CARD STYLE */
 .card {
     border: 1px solid #ccc;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
+    background: white;
+    transition: 0.2s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE FIX */
 .card img {
     width: 100%;
     max-width: 300px;
     height: 200px;
     object-fit: cover;
-    transition: 0.3s;
+    border-radius: 8px;
 }
 
-@media (min-width: 641px) {
-    .card img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.2);
-    }
-}
-
+/* VISITOR MESSAGE */
 #visitor-message {
     background: #eee;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
     font-weight: bold;
+    border-radius: 8px;
 }
