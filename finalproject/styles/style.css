@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    line-height: 1.6;
 }
 
 /* HEADER */
@@ -11,6 +12,11 @@ header {
     background: #222;
     color: white;
     padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    margin: 0;
 }
 
 #menu {
@@ -42,6 +48,10 @@ header {
     background: #0077cc;
 }
 
+.navigation a.active {
+    background: #0077cc;
+}
+
 /* HERO */
 .hero {
     position: relative;
@@ -52,7 +62,6 @@ header {
     height: auto;
     display: block;
     filter: brightness(70%);
-    /* melhora leitura do texto */
 }
 
 .hero-text {
@@ -60,16 +69,11 @@ header {
     top: 20%;
     left: 20px;
     color: white;
-    max-width: 400px;
-}
-
-.hero-text h1 {
-    margin: 0;
-    font-size: 2rem;
+    max-width: 90%;
 }
 
 .hero-text h2 {
-    margin: 5px 0;
+    margin: 0;
     font-size: 1.5rem;
 }
 
@@ -87,9 +91,17 @@ header {
     border-radius: 5px;
 }
 
+.btn:hover {
+    background: #005fa3;
+}
+
 /* FEATURES */
 .features {
     padding: 1rem;
+}
+
+.features h2 {
+    margin-top: 0;
 }
 
 .grid {
@@ -102,10 +114,13 @@ header {
     padding: 1rem;
     border-radius: 8px;
 }
+
+/* ACESSIBILIDADE */
 .visually-hidden {
     position: absolute;
     left: -9999px;
 }
+
 /* FOOTER */
 footer {
     background: #222;
