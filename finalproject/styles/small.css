@@ -45,6 +45,7 @@ header h1 {
 
 .navigation a:hover {
     background: #0077cc;
+    color: #ffffff;
 }
 
 .navigation a.active {
@@ -59,7 +60,7 @@ header h1 {
     width: 100%;
     height: auto;
     display: block;
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 .hero-text {
