@@ -9,6 +9,7 @@ let allParts = [];
 async function getParts() {
     try {
         const response = await fetch("data/parts.json");
+
         if (!response.ok) {
             throw new Error("Could not load parts data.");
         }
@@ -19,6 +20,7 @@ async function getParts() {
         populateFilter(allParts);
         displayParts(allParts);
         updateStats(allParts);
+
     } catch (error) {
         partsContainer.innerHTML = `<p>${error.message}</p>`;
     }
@@ -40,6 +42,7 @@ function updateStats(parts) {
 
     const totalPrice = parts.reduce((sum, part) => sum + part.price, 0);
     const avg = parts.length ? (totalPrice / parts.length).toFixed(2) : 0;
+
     averagePrice.textContent = `$${avg}`;
 }
 
@@ -52,13 +55,14 @@ function displayParts(parts) {
         card.setAttribute("tabindex", "0");
 
         card.innerHTML = `
-      <h3>${part.name}</h3>
-      <p><strong>Type:</strong> ${part.type}</p>
-      <p><strong>Price:</strong> $${part.price}</p>
-      <p><strong>Gain:</strong> ${part.gain}</p>
-    `;
+            <h3>${part.name}</h3>
+            <p><strong>Type:</strong> ${part.type}</p>
+            <p><strong>Price:</strong> $${part.price}</p>
+            <p><strong>Gain:</strong> ${part.gain}</p>
+        `;
 
         card.addEventListener("click", () => displayPartDetails(part));
+
         card.addEventListener("keypress", (event) => {
             if (event.key === "Enter") {
                 displayPartDetails(part);
@@ -70,25 +74,21 @@ function displayParts(parts) {
 }
 
 function displayPartDetails(part) {
+    if (!partDetails) return; // evita erro
+
     partDetails.innerHTML = `
-    <button id="closeModal">Close</button>
-    <h2>${part.name}</h2>
-    <p><strong>Type:</strong> ${part.type}</p>
-    <p><strong>Price:</strong> $${part.price}</p>
-    <p><strong>Gain:</strong> ${part.gain}</p>
-    <p><strong>Description:</strong> ${part.description}</p>
-  `;
+        <button id="closeModal">Close</button>
+        <h2>${part.name}</h2>
+        <p><strong>Type:</strong> ${part.type}</p>
+        <p><strong>Price:</strong> $${part.price}</p>
+        <p><strong>Gain:</strong> ${part.gain}</p>
+        <p><strong>Description:</strong> ${part.description}</p>
+    `;
 
     partDetails.showModal();
 
     document.getElementById("closeModal").addEventListener("click", () => {
         partDetails.close();
-    });
-
-    partDetails.addEventListener("click", (event) => {
-        if (event.target === partDetails) {
-            partDetails.close();
-        }
     });
 }
 
@@ -102,6 +102,7 @@ typeFilter.addEventListener("change", () => {
     }
 
     const filteredParts = allParts.filter(part => part.type === selectedType);
+
     displayParts(filteredParts);
     updateStats(filteredParts);
 });
