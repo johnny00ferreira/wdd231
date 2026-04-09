@@ -116,6 +116,21 @@ header h1 {
     position: absolute;
     left: -9999px;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
 footer {
     background: #222;
