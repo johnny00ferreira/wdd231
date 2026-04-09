@@ -30,7 +30,7 @@ header h1 {
 .navigation {
     display: none;
     flex-direction: column;
-    background: #333;
+    background: #222;
 }
 
 .navigation.open {
