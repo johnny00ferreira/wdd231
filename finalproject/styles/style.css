@@ -18,6 +18,7 @@ header {
     background: none;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 /* NAV */
@@ -48,19 +49,40 @@ header {
 
 .hero img {
     width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(70%);
+    /* melhora leitura do texto */
 }
 
 .hero-text {
     position: absolute;
-    bottom: 20px;
+    top: 20%;
     left: 20px;
     color: white;
+    max-width: 400px;
 }
 
+.hero-text h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.hero-text h2 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+.hero-text p {
+    margin: 10px 0;
+}
+
+/* BOTÃO */
 .btn {
+    display: inline-block;
     background: #0077cc;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -87,21 +109,4 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-}
-
-/* RESPONSIVO */
-@media (min-width: 768px) {
-    #menu {
-        display: none;
-    }
-
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
