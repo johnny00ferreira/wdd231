@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onix Performance Hub | Upgrades</title>
-    <meta name="description"
-        content="Browse Chevrolet Onix upgrade parts with prices, categories, gains, and descriptions in a dynamic catalog.">
+    <meta name="description" content="Browse Chevrolet Onix upgrade parts with prices, categories, gains, and descriptions in a dynamic catalog.">
     <meta name="author" content="Johnny Ferreira">
-
     <meta property="og:title" content="Onix Performance Hub | Upgrades">
     <meta property="og:description" content="Browse upgrade ideas and performance parts for Chevrolet Onix owners.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/hero-car.webp">
     <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/finalproject/upgrades.html">
-
     <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
 </head>
 
 <body>
@@ -66,6 +65,11 @@
             <h2>Available Upgrades</h2>
             <div id="parts-container" class="parts-grid"></div>
         </section>
+        
+        <section class="features">
+            <h2>Available Upgrades</h2>
+            <div id="parts-container" class="grid"></div>
+        </section>
 
         <dialog id="part-details"></dialog>
     </main>
@@ -78,7 +82,7 @@
     </footer>
 
     <script src="scripts/navigation.js"></script>
-    <script type="module" src="scripts/upgrades.js"></script>
+    <script src="scripts/upgrades.js"></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
