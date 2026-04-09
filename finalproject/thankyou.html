@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onix Performance Hub | Thank You</title>
+    <meta name="description" content="View the submitted maintenance form details for Onix Performance Hub.">
+    <meta name="author" content="Johnny Ferreira">
+
+    <meta property="og:title" content="Onix Performance Hub | Thank You">
+    <meta property="og:description" content="Submitted maintenance form details.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-car.webp">
+    <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/finalproject/thankyou.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Onix Performance Hub</h1>
+            <p class="tagline">Upgrades, maintenance, and smarter car care</p>
+        </div>
+        <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="upgrades.html">Upgrades</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>Form Submission Details</h2>
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Onix Performance Hub</p>
+        <p>Johnny Ferreira</p>
+        <p><a href="#">Video Demo</a></p>
+        <p><a href="#">Attributions</a></p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const params = new URLSearchParams(window.location.search);
+        const results = document.getElementById("results");
+
+        results.innerHTML = `
+      <p><strong>Owner Name:</strong> ${params.get("owner") || ""}</p>
+      <p><strong>Service Type:</strong> ${params.get("service") || ""}</p>
+      <p><strong>Service Date:</strong> ${params.get("service-date") || ""}</p>
+      <p><strong>Mileage:</strong> ${params.get("mileage") || ""} km</p>
+      <p><strong>Notes:</strong> ${params.get("notes") || ""}</p>
+    `;
+    </script>
+</body>
+
+</html>

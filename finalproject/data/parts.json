@@ -1,0 +1,109 @@
+{
+    "parts": [
+        {
+            "name": "Sport Air Filter",
+            "type": "Engine",
+            "price": 120,
+            "gain": "+5 HP",
+            "description": "Improves airflow and engine performance."
+        },
+        {
+            "name": "Performance Exhaust",
+            "type": "Exhaust",
+            "price": 450,
+            "gain": "+10 HP",
+            "description": "Enhances exhaust flow and sound."
+        },
+        {
+            "name": "ECU Remap",
+            "type": "Tuning",
+            "price": 800,
+            "gain": "+20 HP",
+            "description": "Optimizes engine control for better performance."
+        },
+        {
+            "name": "Cold Air Intake",
+            "type": "Engine",
+            "price": 300,
+            "gain": "+8 HP",
+            "description": "Improves cold air intake efficiency."
+        },
+        {
+            "name": "High Performance Spark Plugs",
+            "type": "Engine",
+            "price": 90,
+            "gain": "+3 HP",
+            "description": "Better combustion efficiency."
+        },
+        {
+            "name": "Turbo Kit",
+            "type": "Engine",
+            "price": 2500,
+            "gain": "+50 HP",
+            "description": "Significant boost in engine power."
+        },
+        {
+            "name": "Sports Suspension",
+            "type": "Suspension",
+            "price": 700,
+            "gain": "Handling",
+            "description": "Improves stability and cornering."
+        },
+        {
+            "name": "Brake Upgrade Kit",
+            "type": "Brakes",
+            "price": 600,
+            "gain": "Safety",
+            "description": "Improves braking performance."
+        },
+        {
+            "name": "Lightweight Wheels",
+            "type": "Wheels",
+            "price": 900,
+            "gain": "Efficiency",
+            "description": "Reduces weight and improves handling."
+        },
+        {
+            "name": "Performance Tires",
+            "type": "Wheels",
+            "price": 500,
+            "gain": "Grip",
+            "description": "Better traction and stability."
+        },
+        {
+            "name": "Intercooler Upgrade",
+            "type": "Engine",
+            "price": 650,
+            "gain": "+12 HP",
+            "description": "Improves turbo cooling efficiency."
+        },
+        {
+            "name": "Fuel Pump Upgrade",
+            "type": "Engine",
+            "price": 350,
+            "gain": "Fuel Efficiency",
+            "description": "Provides better fuel delivery."
+        },
+        {
+            "name": "Short Shifter",
+            "type": "Transmission",
+            "price": 200,
+            "gain": "Faster Shifts",
+            "description": "Improves gear shifting speed."
+        },
+        {
+            "name": "Performance Clutch",
+            "type": "Transmission",
+            "price": 750,
+            "gain": "Durability",
+            "description": "Handles higher power output."
+        },
+        {
+            "name": "Oil Cooler",
+            "type": "Engine",
+            "price": 400,
+            "gain": "Engine Life",
+            "description": "Keeps engine oil temperature stable."
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onix Performance Hub | Upgrades</title>
+    <meta name="description"
+        content="Browse Chevrolet Onix upgrade parts with prices, categories, gains, and descriptions in a dynamic catalog.">
+    <meta name="author" content="Johnny Ferreira">
+
+    <meta property="og:title" content="Onix Performance Hub | Upgrades">
+    <meta property="og:description" content="Browse upgrade ideas and performance parts for Chevrolet Onix owners.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-car.webp">
+    <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/finalproject/upgrades.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Onix Performance Hub</h1>
+            <p class="tagline">Upgrades, maintenance, and smarter car care</p>
+        </div>
+        <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="upgrades.html" class="active">Upgrades</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+
+    <main>
+        <section class="page-intro card">
+            <h2>Upgrade Catalog</h2>
+            <p>
+                This page displays upgrade data loaded from a local JSON file using fetch, async/await, and try/catch.
+                Click a card to open the modal with more details.
+            </p>
+        </section>
+
+        <section class="controls card">
+            <h2>Filter Parts</h2>
+            <label for="typeFilter">Choose a category:</label>
+            <select id="typeFilter">
+                <option value="all">All Categories</option>
+            </select>
+        </section>
+
+        <section class="stats-grid">
+            <div class="card stat-card">
+                <h2>Total Items</h2>
+                <p id="total-items">0</p>
+            </div>
+            <div class="card stat-card">
+                <h2>Average Price</h2>
+                <p id="average-price">$0</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Available Upgrades</h2>
+            <div id="parts-container" class="parts-grid"></div>
+        </section>
+
+        <dialog id="part-details"></dialog>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Onix Performance Hub</p>
+        <p>Johnny Ferreira</p>
+        <p><a href="#">Video Demo</a></p>
+        <p><a href="#">Attributions</a></p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script type="module" src="scripts/upgrades.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

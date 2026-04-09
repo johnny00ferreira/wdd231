@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Onix Performance Hub | Home</title>
+
+    <meta name="description" content="Track maintenance, upgrades and improve your Chevrolet Onix performance.">
+    <meta name="author" content="Johnny Ferreira">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Onix Performance Hub">
+    <meta property="og:description" content="Car upgrades and maintenance tracker for Onix owners.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Onix Performance Hub</h1>
+        <button id="menu">☰</button>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="upgrades.html">Upgrades</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/car.jpg" alt="Modified Chevrolet Onix" loading="lazy">
+            <div class="hero-text">
+                <h2>Boost Your Car Performance</h2>
+                <p>Upgrade and track your Onix easily</p>
+                <a href="upgrades.html" class="btn">Explore Upgrades</a>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="features">
+            <h2>What You Can Do</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Performance Upgrades</h3>
+                    <p>Discover the best upgrades for speed and efficiency.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Maintenance Tracking</h3>
+                    <p>Keep track of oil changes, filters, and parts.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Car Insights</h3>
+                    <p>Understand your vehicle better and improve performance.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Onix Performance Hub</p>
+        <p>Johnny Ferreira</p>
+        <p><a href="#">Video Demo</a></p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

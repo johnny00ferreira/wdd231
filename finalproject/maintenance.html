@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onix Performance Hub | Maintenance</title>
+    <meta name="description"
+        content="Track Chevrolet Onix maintenance items, save service details with localStorage, and submit a service form.">
+    <meta name="author" content="Johnny Ferreira">
+
+    <meta property="og:title" content="Onix Performance Hub | Maintenance">
+    <meta property="og:description" content="Track maintenance history and save your service records locally.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-car.webp">
+    <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/finalproject/maintenance.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Onix Performance Hub</h1>
+            <p class="tagline">Upgrades, maintenance, and smarter car care</p>
+        </div>
+        <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </header>
+
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="upgrades.html">Upgrades</a>
+        <a href="maintenance.html" class="active">Maintenance</a>
+    </nav>
+
+    <main>
+        <section class="page-intro card">
+            <h2>Maintenance Tracker</h2>
+            <p>
+                Save maintenance history for your car. This page uses localStorage to keep your records on the client
+                side.
+            </p>
+        </section>
+
+        <section class="form-layout">
+            <section class="card">
+                <h2>Add Maintenance Record</h2>
+                <form method="get" action="thankyou.html" id="maintenance-form">
+                    <label for="owner">Owner Name</label>
+                    <input type="text" id="owner" name="owner" required>
+
+                    <label for="service">Service Type</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select one</option>
+                        <option value="Oil Change">Oil Change</option>
+                        <option value="Air Filter">Air Filter</option>
+                        <option value="Spark Plugs">Spark Plugs</option>
+                        <option value="Brake Service">Brake Service</option>
+                        <option value="Tire Rotation">Tire Rotation</option>
+                        <option value="Suspension Check">Suspension Check</option>
+                    </select>
+
+                    <label for="service-date">Service Date</label>
+                    <input type="date" id="service-date" name="service-date" required>
+
+                    <label for="mileage">Mileage (km)</label>
+                    <input type="number" id="mileage" name="mileage" required>
+
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+
+                    <button type="submit" class="btn">Save and Continue</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Saved Maintenance Records</h2>
+                <div id="saved-records"></div>
+                <button type="button" id="clear-records" class="btn secondary-btn">Clear Saved Records</button>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Onix Performance Hub</p>
+        <p>Johnny Ferreira</p>
+        <p><a href="#">Video Demo</a></p>
+        <p><a href="#">Attributions</a></p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/maintenance.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
