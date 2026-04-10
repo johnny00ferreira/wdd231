@@ -81,12 +81,12 @@ header h1 {
 }
 
 .btn {
-    display: inline-block;
     background: #0077cc;
-    color: white;
+    color: #ffffff;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
 }
 
 .btn:hover {
