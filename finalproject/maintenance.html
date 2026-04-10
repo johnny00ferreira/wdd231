@@ -13,6 +13,9 @@
     <meta property="og:image" content="images/hero-car.webp">
     <meta property="og:url" content="https://johnny00ferreira.github.io/wdd231/chamber/finalproject/maintenance.html">
     <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
@@ -41,9 +44,10 @@
             </p>
         </section>
 
-        <section class="form-layout">
+        <div class="form-layout">
             <section class="card">
                 <h2>Add Maintenance Record</h2>
+
                 <form method="get" action="thankyou.html" id="maintenance-form">
                     <label for="owner">Owner Name</label>
                     <input type="text" id="owner" name="owner" required>
@@ -75,9 +79,12 @@
             <section class="card">
                 <h2>Saved Maintenance Records</h2>
                 <div id="saved-records"></div>
-                <button type="button" id="clear-records" class="btn secondary-btn">Clear Saved Records</button>
+                <button type="button" id="clear-records" class="btn secondary-btn">
+                    Clear Saved Records
+                </button>
             </section>
-        </section>
+
+        </div>
     </main>
 
     <footer>
@@ -87,8 +94,9 @@
         <p><a href="#">Attributions</a></p>
     </footer>
 
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/maintenance.js"></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/maintenance.js" defer></script>
+
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
